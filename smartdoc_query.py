@@ -15,8 +15,8 @@ from dotenv import load_dotenv
 
 # Load API key from .env file
 load_dotenv()
-GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
-print("Google API Key Loaded:", GOOGLE_API_KEY)
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY") or st.secrets.get("GOOGLE_API_KEY", "")
+
 
 
 # ── All LangChain imports (correct paths for latest versions) ─────────────────
